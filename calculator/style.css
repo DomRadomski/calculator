@@ -1,0 +1,103 @@
+:root {
+  --background-color: #1C1C1C;
+  --button-gray: #505050;
+  --button-light-gray: #D4D4D2;
+  --button-orange: #FF9500;
+  --text-white: #FFFFFF;
+  --display-text: #D4D4D2;
+  --display-secondary-text: #A5A5A5;
+}
+
+html {
+  color: var(--text-white);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--button-light-gray);
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 350px;
+  height: 550px;
+  padding: 20px;
+  border-radius: 25px;
+
+  background-color: var(--background-color);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Display Section ===== */
+
+.input {
+  align-self: flex-end;
+  color: var(--display-secondary-text);
+  font-size: 1.2rem;
+  padding: 10px 10px 0px 10px;
+}
+
+.output {
+  align-self: flex-end;
+  color: var(--display-text);
+  font-size: 2.8rem;
+  padding: 0px 10px 20px 10px;
+}
+
+/* ===== Buttons Layout ===== */
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+  background-color: var(--button-gray);
+  color: var(--text-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  filter: brightness(1.2);
+}
+
+/* ===== Color Variants ===== */
+
+.grey {
+  background-color: var(--button-light-gray);
+  color: black;
+}
+
+.orange {
+  background-color: var(--button-orange);
+  color: var(--text-white);
+}
+
+/* ===== Special Wider Button (optional for 0 key) ===== */
+
+.button.wide {
+  width: 150px;
+  border-radius: 35px;
+}
+
+
